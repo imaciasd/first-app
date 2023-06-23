@@ -1,0 +1,69 @@
+React es una librería para front-end.
+Vite es un framework que compila css, babel, procesadores. Compila nuestro código y lo hace legible a cualquier navegador.
+
+CMD
+npm create vite@latest
+nombre: first-app
+react -> javascript
+
+Seguir los pasos que te da la consola después de elegir Javascript (la opción que solo dice Javascript).
+
+<> - React Fragment
+
+Virtual DOM 
+
+Todos los componentes de React deben iniciar con Mayúscula
+
+Props: se refiere a propiedades. Argumentos de objetos con datos que le envíamos al componente para aplicarlo dentro de su lógica. (var, imagenes, inf de apis). Se utiliza para aumentar significativamente la reusabilidad de los componentes en una aplicación, transformando la información que se comparte en información.
+
+Estructurando, desestructurando, 
+
+
+desestructurado 
+
+Main.jsx
+
+const titleStyle = {
+    color: 'white',
+    backgroundColor: 'red',
+}
+
+function Main(props){
+    console.log(props);
+
+    return(
+    <>
+    
+        <h1 style={titleStyle}>{props.user.name}</h1>
+        <h1 
+        style={{
+            color: 'red',
+            backgroundColor: 'white',
+        }}>{props.user.age}</h1>
+    </>
+    )
+}
+export default Main;
+
+
+App.jsx
+
+const userData = {
+  name: 'Iván',
+  age: '26'
+}
+
+function App() {
+  
+
+  return (
+    <>
+      <Navbar />
+      <Main user={userData} />
+    </>
+  )
+}
+
+export default App
+
+
